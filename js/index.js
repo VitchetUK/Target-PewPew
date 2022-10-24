@@ -15,11 +15,11 @@ function addTarget() {
   const targetClone = target.cloneNode();
   targetClone.style.left = getRandom(0, 900 - 90) + "px";
   targetClone.style.top = getRandom(0, 600 - 90) + "px";
-  numWidth = targetBox.width;
+  //numWidth = targetBox.width;
   targetClone.addEventListener("click", function onClick(event) {
     numClicks += 1;
     // score += 100 / ((100 * numWidth) / 70);
-    // document.querySelector("#clickCount").textContent = numClicks;
+    document.querySelector("#clickCount").textContent = numClicks;
     targetClone.remove();
   });
   target.after(targetClone);
