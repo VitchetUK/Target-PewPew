@@ -12,23 +12,43 @@
     <header>
       <h1 class="title">Pew-pew</h1>
     </header>
-    <aside>
-      <div class="info-display">
-        <p id="score">0</p>
-        <p id="nbTarget">0</p>
-        <p id="clickCount">0</p>
-      </div>
-    </aside>
-    <div class="game-space">
-      <section class="main-screen">
-        <div class="target"></div>
-      </section>
-      <section class="buttons">
-        <div>
-          <button id="start-btn">Start</button>
-          <button id="restart-btn">Restart</button>
+    <!-- MAIN PAGE -->
+    <section id="main-page">
+      <h2>Welcome</h2>
+      <button id="launch">Start Playing</button>
+    </section>
+
+    <!-- RULES PAGE -->
+    <section id="rules"></section>
+
+    <!-- GAME PAGE -->
+    <section class="hidden" id="game-page">
+      <aside>
+        <div class="info-display">
+          <p id="score">0</p>
+          <p id="nbTarget">0</p>
+          <p id="clickCount">0</p>
+          <p id="hp">0</p>
+          <p id="timer">0</p>
         </div>
-      </section>
-    </div>
+      </aside>
+      <div class="game-space">
+        <section class="main-screen">
+          <div class="target original" hidden></div>
+        </section>
+        <section class="buttons">
+          <button id="start-btn">Start</button>
+          <p id="score">0</p>
+        </section>
+      </div>
+    </section>
+
+    <!-- End Game modal -->
+
+    <dialog id="modal">
+      <p>Game is finished :(</p>
+
+      <button id="restart-btn">Restart</button>
+    </dialog>
   </body>
 </html>

@@ -1,7 +1,10 @@
 * {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
+}
+
+dialog::backdrop {
+  backdrop-filter: sepia(1) blur(3px);
 }
 
 .game-space {
@@ -15,6 +18,9 @@
   position: relative;
   width: 900px;
   height: 600px;
+  cursor: url("/ressources/hand-point-diag.png"), auto;
+  background-image: url("/ressources/Bg-test.png");
+  background-size: cover;
 }
 
 .target {
@@ -25,7 +31,7 @@
   border: 1px black solid;
   border-radius: 50px;
   background-size: cover;
-  animation: grow 7s;
+  animation: grow 6s;
 }
 @keyframes grow {
   from {
@@ -35,3 +41,23 @@
     transform: scale(1);
   }
 }
+.hidden {
+  display: none;
+}
+
+.info-display {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+
+/* #main-page {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+} */
