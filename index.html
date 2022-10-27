@@ -4,21 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pew-pew</title>
+    <title>Waspirator</title>
     <link rel="stylesheet" href="css/style.css" />
     <script type="module" src="js/index.js"></script>
   </head>
   <body id="bg-gen">
     <header>
-      <h1 class="title">LunchTime</h1>
+      <h1 class="title">Waspirator</h1>
     </header>
     <!-- MAIN PAGE -->
 
     <section id="main-page">
       <div id="first-screen">
-        <h2>Welcome</h2>
-        <p>Context</p>
-        <button id="launch">Start Playing</button>
+        <h2 id="context-text">
+          Dring Dring, it's 1pm! You just grabbed something to eat, and now it's
+          time to head to the rooftop before there is no seats left. BUT oh no!
+          It's mid october, outside is 25°C and a bunch of wasps decided to have
+          a bite in your sandwich.
+        </h2>
+        <button id="launch">Let's eat!</button>
       </div>
     </section>
 
@@ -68,9 +72,21 @@
     <!-- End Game modal -->
 
     <dialog id="modal">
-      <p>Game is finished</p>
-
-      <button id="restart-btn">Restart</button>
+      <div id="end-msg-thumb">
+        <section class="score-info-end">
+          <div id="text-score-end">Well played! Here is your score:</div>
+          <div id="score-end"></div>
+        </section>
+        <div id="end-message">
+          End of the lunchbreak! Time to go back to work.
+          <img
+            src="ressources/Thumb-up.png"
+            alt="Thumb-up"
+            id="thumb-up-end-msg"
+          />
+        </div>
+        <button id="restart-btn">Restart</button>
+      </div>
     </dialog>
   </body>
 </html>

@@ -11,11 +11,21 @@ const hideButton = document.querySelector("#launch");
 const mainPage = document.querySelector("#main-page");
 const gamePage = document.querySelector("#game-page");
 const nbClicks = document.querySelector("#clickCount");
+const endScore = document.querySelector("#score-end");
 
 // Sounds
 const hitSound = new Audio();
 hitSound.src = "ressources/maince.dsp.wav";
 hitSound.volume = 0.01;
+const loseHpSound = new Audio();
+loseHpSound.src = "ressources/main08.dsp.wav";
+loseHpSound.volume = 0.01;
+const endScreenSound = new Audio();
+endScreenSound.src = "ressources/maindc.dsp.wav";
+endScreenSound.volume = 0.01;
+const waspSound = new Audio();
+waspSound.src = "ressources/main64.dsp.wav";
+waspSound.volume = 0.01;
 //
 
 let isRunning = true;
@@ -31,7 +41,7 @@ let numClicks = 0;
 let countTarget = 0;
 let health = 10;
 let overAllScore = 0;
-let timer = 60; // Initialize timer at 60seconds
+let timer = 45; // Initialize timer
 
 const getRandom = (min, max) =>
   Math.floor(Math.random() * (max - min + 1) + min);
@@ -55,11 +65,12 @@ restartButton.addEventListener("click", (event) => {
 // Configure game variable
 function configureGame() {
   isDead = false;
-  timer = 60;
+  timer = 45;
   health = 10;
   overAllScore = 0;
   countTarget = 0;
   numClicks = 0;
+  endScore.textContent = "";
   console.log("configuring game...");
   // run game once configured
   trackTimer.textContent = timer;
@@ -74,7 +85,7 @@ function configureGame() {
 function runGame() {
   // Generate a target every 500ms
   console.log("creating target generator");
-  targetGenerator = setInterval(createTarget, 700);
+  targetGenerator = setInterval(createTarget, 750);
   // Check game status every 50ms
   // console.log("creating game checker");
   // gameChecker = setInterval(checkGame, 50);
@@ -106,6 +117,8 @@ function checkGame() {
 }
 
 function stopGame() {
+  endScore.append(overAllScore.toFixed());
+  endScreenSound.play();
   isDead = true;
   clearInterval(targetGenerator);
   // clearInterval(gameChecker);
@@ -122,11 +135,12 @@ function stopGame() {
 
 function createTarget() {
   const targetClone = target.cloneNode();
+  waspSound.play();
   targetClone.hidden = false;
   targetClone.classList.remove("original");
   // Generate random position for this target
-  targetClone.style.left = getRandom(0, 1000 - 90) + "px";
-  targetClone.style.top = getRandom(0, 600 - 90) + "px";
+  targetClone.style.left = getRandom(0, 1050 - 90) + "px";
+  targetClone.style.top = getRandom(0, 650 - 90) + "px";
 
   targetClone.addEventListener("click", function onClick(event) {
     hitSound.play();
@@ -156,6 +170,7 @@ function createTarget() {
   timeoutIdArray.push(
     setTimeout(() => {
       if (!targetClone.classList.contains("removed") && !isDead) {
+        loseHpSound.play();
         health--;
         console.log("lose 1hp");
         if (health === 0) {
