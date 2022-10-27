@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
+  font-family: "Saira Semi Condensed", sans-serif;
 }
 
 dialog::backdrop {
@@ -18,7 +20,7 @@ dialog::backdrop {
   position: relative;
   width: 900px;
   height: 600px;
-  cursor: url("/ressources/hand-point-diag.png"), auto;
+  cursor: url("/ressources/hand-point-haut-bien-corner.png"), auto;
   background-image: url("/ressources/Bg-test.png");
   background-size: cover;
 }
@@ -27,8 +29,8 @@ dialog::backdrop {
   position: absolute;
   height: 70px;
   width: 70px;
-  background-image: url("/ressources/target.png");
-  border: 1px black solid;
+  background-image: url("/ressources/target+contrast.png");
+  /* border: 1px black solid; */
   border-radius: 50px;
   background-size: cover;
   animation: grow 6s;

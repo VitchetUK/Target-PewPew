@@ -9,6 +9,7 @@ const endScreen = document.getElementById("modal");
 const hideButton = document.querySelector("#launch");
 const mainPage = document.querySelector("#main-page");
 const gamePage = document.querySelector("#game-page");
+const nbClicks = document.querySelector("#clickCount");
 // const startDialog = document.querySelector("#start-dialog");
 // const endDialog = document.querySelector("#end-dialog");
 let isRunning = true;
@@ -16,13 +17,14 @@ let targetGenerator;
 let gameChecker;
 let timerManager;
 let isDead = false;
+let timeoutIdArray = [];
 
 let score = 0;
 let numClicks = 0;
 let countTarget = 0;
-let health = 5;
+let health = 10;
 let overAllScore = 0;
-let timer = 60; // Initialize timer at 30seconds
+let timer = 60; // Initialize timer at 60seconds
 
 const getRandom = (min, max) =>
   Math.floor(Math.random() * (max - min + 1) + min);
@@ -47,11 +49,16 @@ function configureGame() {
   isDead = false;
   timer = 60;
   health = 10;
+  overAllScore = 0;
+  countTarget = 0;
+  numClicks = 0;
   console.log("configuring game...");
   // run game once configured
   trackTimer.textContent = timer;
   trackHealth.textContent = health;
   trackScore.textContent = overAllScore;
+  trackNbTarg.textContent = countTarget;
+  nbClicks.textContent = numClicks;
 
   runGame();
 }
@@ -97,7 +104,9 @@ function stopGame() {
   clearInterval(timerManager);
   console.log("fin du jeu !!!!");
   startButton.disabled = false;
+  timeoutIdArray.forEach((id) => clearInterval(id));
   document.querySelectorAll(".target:not(.original)").forEach((element) => {
+    console.log(element);
     element.remove();
   });
   endScreen.showModal();
@@ -135,17 +144,20 @@ function createTarget() {
   });
 
   // Decrement if player has not clicked on target in time
-  setTimeout(() => {
-    if (!targetClone.classList.contains("removed") && !isDead) {
-      health--;
-      if (health === 0) {
-        console.log("0 hp :(");
-        stopGame();
+  timeoutIdArray.push(
+    setTimeout(() => {
+      if (!targetClone.classList.contains("removed") && !isDead) {
+        health--;
+        console.log("lose 1hp");
+        if (health === 0) {
+          console.log("0 hp :(");
+          stopGame();
+        }
       }
-    }
-    document.querySelector("#hp").textContent = health;
-    targetClone.remove();
-  }, 6000);
+      document.querySelector("#hp").textContent = health;
+      targetClone.remove();
+    }, 6000)
+  );
 
   // Initiate for next target generation
   target.after(targetClone);
