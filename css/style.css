@@ -111,7 +111,7 @@ h1 {
   margin: 0;
 }
 #start-btn {
-  padding: 2em;
+  padding: 1.5em;
   border-radius: 10px;
   margin: 0;
   background-image: linear-gradient(
@@ -176,7 +176,7 @@ h1 {
   font-size: 1.2em;
 }
 .score-info {
-  padding: 2em 0;
+  padding: 1.5em 0;
   font-size: 1.5em;
   color: white;
 }
