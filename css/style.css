@@ -29,8 +29,8 @@ dialog::backdrop {
   position: relative;
   width: 1000px;
   height: 600px;
-  cursor: url("../ressources/hand-point-haut-bien-corner.png"), auto;
-  background-image: url("../ressources/Bg-test.png");
+  cursor: url("ressources/hand-point-haut-bien-corner.png"), auto;
+  background-image: url("ressources/Bg-test.png");
   background-size: cover;
 }
 
@@ -38,7 +38,7 @@ dialog::backdrop {
   position: absolute;
   height: 70px;
   width: 70px;
-  background-image: url("../ressources/target+contrastRED.png");
+  background-image: url("ressources/target+contrastRED.png");
   border: 1px black solid;
   border-radius: 50px;
   background-size: cover;
@@ -79,9 +79,6 @@ h1 {
   font-size: 3em;
   text-align: center;
   padding: 0.3em;
-  margin: 0 0 0.2em;
-  background-color: rgba(0, 0, 0, 0.1);
-  color: white;
 }
 
 .board-info {
@@ -161,14 +158,15 @@ h1 {
 }
 
 #main-page {
-  background-image: url("../ressources/Pixel-entry.png");
-  height: 85%;
+  background-image: url("ressources/Pixel-entry.png");
+  height: 100vh;
+  width: 100vw;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 #game-page {
-  background-image: url("../ressources/635a9160a9392.png");
+  background-image: url("ressources/635a9160a9392.png");
   background-position: center;
   background-size: cover;
 }
