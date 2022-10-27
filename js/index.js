@@ -48,6 +48,7 @@ startButton.addEventListener("click", (event) => {
 
 restartButton.addEventListener("click", (event) => {
   endScreen.close();
+  startButton.disabled = true;
   configureGame();
 });
 
@@ -177,5 +178,6 @@ function createTarget() {
 hideButton.addEventListener("click", function quitMain(event) {
   mainPage.classList.add("hidden");
   gamePage.classList.remove("hidden");
-  document.body.style.backgroundImage("/ressources/635a9160a9392.png");
+  document.body.style.backgroundImage =
+    "url(./../ressources/635a9160a9392.png)";
 });
