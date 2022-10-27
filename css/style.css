@@ -168,7 +168,7 @@ h1 {
   background-size: cover;
 }
 #game-page {
-  background-image: url(/ressources/635a9160a9392.png);
+  background-image: url("/ressources/635a9160a9392.png");
   background-position: center;
   background-size: cover;
 }
