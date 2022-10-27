@@ -13,8 +13,8 @@ const gamePage = document.querySelector("#game-page");
 const nbClicks = document.querySelector("#clickCount");
 
 // Sounds
-const hitSound = new Audio("ressources/maince.dsp.wav");
-
+const hitSound = new Audio();
+hitSound.src = "./../ressources/maince.dsp.wav";
 hitSound.volume = 0.01;
 //
 
