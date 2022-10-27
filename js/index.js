@@ -1,3 +1,4 @@
+// DOM
 const startButton = document.querySelector("#start-btn");
 const restartButton = document.querySelector("#restart-btn");
 const target = document.querySelector(".target");
@@ -10,9 +11,12 @@ const hideButton = document.querySelector("#launch");
 const mainPage = document.querySelector("#main-page");
 const gamePage = document.querySelector("#game-page");
 const nbClicks = document.querySelector("#clickCount");
-const hitSound = new Audio("/ressources/maince.dsp.wav");
+
+// Sounds
+const hitSound = new Audio("ressources/maince.dsp.wav");
 
 hitSound.volume = 0.01;
+//
 
 let isRunning = true;
 let targetGenerator;
@@ -21,6 +25,7 @@ let timerManager;
 let isDead = false;
 let timeoutIdArray = [];
 
+// Base stats
 let score = 0;
 let numClicks = 0;
 let countTarget = 0;
@@ -176,6 +181,6 @@ hideButton.addEventListener("click", function quitMain(event) {
 
 // Function to play sounds
 function playSound() {
-  let sounds = new Audio("/ressources/maince.dsp.wav");
+  let sounds = new Audio("ressources/maince.dsp.wav");
   sounds.play;
 }
