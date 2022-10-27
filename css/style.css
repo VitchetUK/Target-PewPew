@@ -3,10 +3,11 @@
   box-sizing: border-box;
   padding: 0;
   font-family: "Saira Semi Condensed", sans-serif;
+  margin: 0;
 }
+body,
 html {
-  /*background-image: url("/ressources/terrace-bg.jpg");
-  background-size: cover;*/
+  height: 100%;
 }
 .hidden {
   display: none;
@@ -26,7 +27,7 @@ dialog::backdrop {
   border: 2px rgb(198, 193, 193) solid;
   border-radius: 25px;
   position: relative;
-  width: 900px;
+  width: 1000px;
   height: 600px;
   cursor: url("/ressources/hand-point-haut-bien-corner.png"), auto;
   background-image: url("/ressources/Bg-test.png");
@@ -37,8 +38,8 @@ dialog::backdrop {
   position: absolute;
   height: 70px;
   width: 70px;
-  background-image: url("/ressources/target+contrast.png");
-  /* border: 1px black solid; */
+  background-image: url("/ressources/target+contrastRED.png");
+  border: 1px black solid;
   border-radius: 50px;
   background-size: cover;
   animation: grow 6s;
@@ -63,6 +64,7 @@ dialog::backdrop {
   border: 1px black solid;
   border-radius: 10px;
   max-height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 #first-screen {
@@ -75,16 +77,18 @@ dialog::backdrop {
 
 h1 {
   font-size: 3em;
-  margin: 0;
   text-align: center;
-  padding: 0.5em;
+  padding: 0.3em;
+  margin: 0 0 0.2em;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
 }
 
 .board-info {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -95,8 +99,76 @@ h1 {
   align-items: center;
   border: 1px black solid;
   border-radius: 10px;
-  padding: 10% 1em;
+  padding: 3% 1em;
+  font-size: 1.3em;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 #start-btn {
   padding: 2em;
+  border-radius: 10px;
+}
+#clock {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}
+#image-time {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+#wasp {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}
+#image-click {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+#heart {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}
+#image-hp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+#thumb {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}
+#image-thumb {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.score-info {
+  padding: 2em 0;
+  font-size: 1.5em;
+  color: white;
+}
+#score {
+  text-align: center;
+}
+
+#main-page {
+  background-image: url("/ressources/Pixel-entry.png");
+  height: 85%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#game-page {
+  background-image: url(/ressources/635a9160a9392.png);
+  background-position: center;
+  background-size: cover;
 }

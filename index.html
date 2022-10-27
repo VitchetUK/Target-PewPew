@@ -10,7 +10,7 @@
   </head>
   <body>
     <header>
-      <h1 class="title">Pew-pew</h1>
+      <h1 class="title">IronHack Rooftop 101</h1>
     </header>
     <!-- MAIN PAGE -->
 
@@ -32,12 +32,29 @@
           <section class="buttons">
             <button id="start-btn">Start</button>
           </section>
+          <section class="score-info">
+            <div id="text-score">Your score:</div>
+            <div id="score">0</div>
+          </section>
           <ul class="info-display">
-            <li id="score">0</li>
-            <li id="nbTarget">0</li>
-            <li id="clickCount">0</li>
-            <li id="hp">0</li>
-            <li id="timer">0</li>
+            <div id="image-thumb">
+              <img src="ressources/Thumb-up.png" alt="Thumb up" id="thumb" />
+              <li id="clickCount">0</li>
+            </div>
+            <div id="image-click">
+              <img src="ressources/wasp-80PX.png" alt="Wasp image" id="wasp" />
+              <li id="nbTarget">0</li>
+            </div>
+
+            <div id="image-hp">
+              <img src="ressources/heart.png" alt="Heart image" id="heart" />
+              <li id="hp">0</li>
+            </div>
+
+            <div id="image-time">
+              <img src="ressources/lhorloge.png" alt="Clock image" id="clock" />
+              <li id="timer">0</li>
+            </div>
           </ul>
         </div>
         <div class="game-space">

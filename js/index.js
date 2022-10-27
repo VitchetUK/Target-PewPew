@@ -124,7 +124,7 @@ function createTarget() {
   targetClone.hidden = false;
   targetClone.classList.remove("original");
   // Generate random position for this target
-  targetClone.style.left = getRandom(0, 900 - 90) + "px";
+  targetClone.style.left = getRandom(0, 1000 - 90) + "px";
   targetClone.style.top = getRandom(0, 600 - 90) + "px";
 
   targetClone.addEventListener("click", function onClick(event) {
@@ -178,9 +178,3 @@ hideButton.addEventListener("click", function quitMain(event) {
   mainPage.classList.add("hidden");
   gamePage.classList.remove("hidden");
 });
-
-// Function to play sounds
-function playSound() {
-  let sounds = new Audio("ressources/maince.dsp.wav");
-  sounds.play;
-}
