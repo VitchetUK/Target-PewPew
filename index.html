@@ -5,17 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pew-pew</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <script type="module" src="/js/index.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header>
       <h1 class="title">Pew-pew</h1>
     </header>
     <!-- MAIN PAGE -->
+
     <section id="main-page">
-      <h2>Welcome</h2>
-      <button id="launch">Start Playing</button>
+      <div id="first-screen">
+        <h2>Welcome</h2>
+        <p>context</p>
+        <button id="launch">Start Playing</button>
+      </div>
     </section>
 
     <!-- RULES PAGE -->
@@ -23,32 +26,34 @@
 
     <!-- GAME PAGE -->
     <section class="hidden" id="game-page">
-      <aside>
-        <div class="info-display">
-          <p id="score">0</p>
-          <p id="nbTarget">0</p>
-          <p id="clickCount">0</p>
-          <p id="hp">0</p>
-          <p id="timer">0</p>
+      <div class="board-info">
+        <div>
+          <ul class="info-display">
+            <li id="score">0</li>
+            <li id="nbTarget">0</li>
+            <li id="clickCount">0</li>
+            <li id="hp">0</li>
+            <li id="timer">0</li>
+          </ul>
         </div>
-      </aside>
-      <div class="game-space">
-        <section class="main-screen">
-          <div class="target original" hidden></div>
-        </section>
-        <section class="buttons">
-          <button id="start-btn">Start</button>
-          <p id="score">0</p>
-        </section>
+        <div class="game-space">
+          <section class="main-screen">
+            <div class="target original" hidden></div>
+          </section>
+          <section class="buttons">
+            <button id="start-btn">Start</button>
+          </section>
+        </div>
       </div>
     </section>
 
     <!-- End Game modal -->
 
     <dialog id="modal">
-      <p>Game is finished :(</p>
+      <p>Game is finished</p>
 
       <button id="restart-btn">Restart</button>
     </dialog>
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>

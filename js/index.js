@@ -10,8 +10,7 @@ const hideButton = document.querySelector("#launch");
 const mainPage = document.querySelector("#main-page");
 const gamePage = document.querySelector("#game-page");
 const nbClicks = document.querySelector("#clickCount");
-// const startDialog = document.querySelector("#start-dialog");
-// const endDialog = document.querySelector("#end-dialog");
+
 let isRunning = true;
 let targetGenerator;
 let gameChecker;
