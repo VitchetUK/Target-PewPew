@@ -14,7 +14,7 @@ const nbClicks = document.querySelector("#clickCount");
 
 // Sounds
 const hitSound = new Audio();
-hitSound.src = "./../ressources/maince.dsp.wav";
+hitSound.src = "ressources/maince.dsp.wav";
 hitSound.volume = 0.01;
 //
 

@@ -157,7 +157,7 @@ h1 {
   text-align: center;
 }
 
-#main-page {
+body {
   background-image: url("./../ressources/Pixel-entry.png");
   height: 100vh;
   width: 100vw;
