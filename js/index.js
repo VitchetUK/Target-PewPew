@@ -177,4 +177,5 @@ function createTarget() {
 hideButton.addEventListener("click", function quitMain(event) {
   mainPage.classList.add("hidden");
   gamePage.classList.remove("hidden");
+  document.body.style.backgroundImage("/ressources/635a9160a9392.png");
 });
