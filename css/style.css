@@ -27,8 +27,8 @@ dialog::backdrop {
   border: 2px rgb(198, 193, 193) solid;
   border-radius: 25px;
   position: relative;
-  width: 1050px;
-  height: 650px;
+  width: 1000px;
+  height: 600px;
   cursor: url("./../ressources/hand-point-haut-bien-corner.png"), auto;
   background-image: url("./../ressources/Bg-test.png");
   background-size: cover;

@@ -139,8 +139,8 @@ function createTarget() {
   targetClone.hidden = false;
   targetClone.classList.remove("original");
   // Generate random position for this target
-  targetClone.style.left = getRandom(0, 1050 - 90) + "px";
-  targetClone.style.top = getRandom(0, 650 - 90) + "px";
+  targetClone.style.left = getRandom(0, 1000 - 80) + "px";
+  targetClone.style.top = getRandom(0, 600 - 80) + "px";
 
   targetClone.addEventListener("click", function onClick(event) {
     hitSound.play();
@@ -180,7 +180,7 @@ function createTarget() {
       }
       document.querySelector("#hp").textContent = health;
       targetClone.remove();
-    }, 6000)
+    }, 5500)
   );
 
   // Initiate for next target generation
