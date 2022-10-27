@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pew-pew</title>
     <link rel="stylesheet" href="/css/style.css" />
+    <script type="module" src="/js/index.js"></script>
   </head>
   <body>
     <header>
@@ -27,7 +28,10 @@
     <!-- GAME PAGE -->
     <section class="hidden" id="game-page">
       <div class="board-info">
-        <div>
+        <div class="li-btn">
+          <section class="buttons">
+            <button id="start-btn">Start</button>
+          </section>
           <ul class="info-display">
             <li id="score">0</li>
             <li id="nbTarget">0</li>
@@ -40,9 +44,6 @@
           <section class="main-screen">
             <div class="target original" hidden></div>
           </section>
-          <section class="buttons">
-            <button id="start-btn">Start</button>
-          </section>
         </div>
       </div>
     </section>
@@ -54,6 +55,5 @@
 
       <button id="restart-btn">Restart</button>
     </dialog>
-    <script type="module" src="/js/"></script>
   </body>
 </html>

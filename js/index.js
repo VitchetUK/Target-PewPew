@@ -10,6 +10,9 @@ const hideButton = document.querySelector("#launch");
 const mainPage = document.querySelector("#main-page");
 const gamePage = document.querySelector("#game-page");
 const nbClicks = document.querySelector("#clickCount");
+const hitSound = new Audio("/ressources/maince.dsp.wav");
+
+hitSound.volume = 0.01;
 
 let isRunning = true;
 let targetGenerator;
@@ -120,6 +123,7 @@ function createTarget() {
   targetClone.style.top = getRandom(0, 600 - 90) + "px";
 
   targetClone.addEventListener("click", function onClick(event) {
+    hitSound.play();
     let targetScore = 0;
     // Compute score for this target
     let infoTarget = targetClone.getBoundingClientRect();
@@ -169,3 +173,9 @@ hideButton.addEventListener("click", function quitMain(event) {
   mainPage.classList.add("hidden");
   gamePage.classList.remove("hidden");
 });
+
+// Function to play sounds
+function playSound() {
+  let sounds = new Audio("/ressources/maince.dsp.wav");
+  sounds.play;
+}
