@@ -85,7 +85,7 @@ function configureGame() {
 function runGame() {
   // Generate a target every 500ms
   console.log("creating target generator");
-  targetGenerator = setInterval(createTarget, 750);
+  targetGenerator = setInterval(createTarget, 600);
   // Check game status every 50ms
   // console.log("creating game checker");
   // gameChecker = setInterval(checkGame, 50);
