@@ -206,7 +206,7 @@ body {
   color: black;
   font-size: 1.4em;
   padding: 0.7em;
-  margin: 6em;
+  margin: 2em;
   font-weight: 600;
   text-align: center;
 }
@@ -225,7 +225,7 @@ body {
   font-size: 2em;
   padding: 16px 24px;
   text-align: center;
-  width: 10em;
+  width: 8em;
   margin: 0;
 }
 #thumb-up-end-msg {
@@ -279,4 +279,29 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+}
+#rules {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 25px;
+  border: 1px black solid;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: 0;
+  color: white;
+  margin: 2em;
+  font-size: 1.1em;
+}
+
+#rules-title {
+  font-weight: 500;
+  text-decoration: underline;
+  margin: 0;
+}
+
+#rules-ul {
+  list-style: none;
 }
